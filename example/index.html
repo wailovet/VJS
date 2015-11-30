@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<script src="http://requirejs.org/docs/release/2.1.22/minified/require.js" data-main="v"></script>-->
+    <!--<script src="http://requirejs.org/docs/release/2.1.22/minified/require.js" data-main="../src/v"></script>-->
     <script src="../build/v.js"></script>
     <script>
+        Vjs.ready(function(){
+            vjs = new Vjs();
+        });
         function start(){
-            Vjs.lock.start(true);
-            setTimeout(Vjs.lock.end,3000);
+            vjs.lock.start(true);
+            setTimeout(vjs.lock.end,3000);
         }
     </script>
     <title></title>
